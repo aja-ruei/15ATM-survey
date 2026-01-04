@@ -1,0 +1,687 @@
+:root {
+    --primary-red: #A3003B;
+    --secondary-red: #D93657;
+    --tertiary-red: #f8dedc83;
+    --bg-light: #F2F4F7;
+    --white: #FFFFFF;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --border-gray: #E0E0E0;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    /* Prevent title wrapping */
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: var(--white);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 20px 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.deadline-badge {
+    background-color: var(--white);
+    color: var(--secondary-red);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+
+/* landing page */
+
+.landing-page {
+    position: relative;
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-top {
+    display: flex;
+    height: 300px;
+    padding: 0 120px;
+    gap: 40px;
+    align-self: stretch;
+    background-color: var(--tertiary-red);
+}
+
+.highlight-banner {
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.highlight-title {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.highlight-list {
+    color: var(--primary-red);
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    gap: 16px;
+}
+
+.landing-image {
+    position: relative;
+    width: 50%;
+}
+
+
+.landing-page img {
+    width: 102%;
+}
+
+.atm-screen {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
+
+.landing-bottom {
+    display: flex;
+    padding: 0 120px 40px 120px;
+    align-items: flex-end;
+    gap: 44px;
+    align-self: stretch;
+}
+
+
+.mascot-block {
+    position: relative;
+    width: 40%;
+}
+
+.mascot-full {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.promo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    margin: 100px 0 0 100px;
+}
+
+.promo-list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.promo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: bold;
+}
+
+
+/* survey */
+
+.survey-section {
+    padding: 24px 120px;
+}
+
+
+.question {
+    margin-bottom: 32px;
+}
+
+.question-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+
+/* Rating Scale (1-10) */
+.rating-scale {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.rating-item {
+    flex: 1;
+    border: 1.5px solid var(--border-gray);
+    border-radius: var(--border-radius);
+    padding: 12px 2px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--text-gray);
+    white-space: nowrap;
+}
+
+.rating-item:hover {
+    border-color: var(--secondary-red);
+    color: var(--secondary-red);
+    background-color: #FFF5F7;
+    transform: translateY(-2px);
+}
+
+.rating-item.selected {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    background-color: #FFF0F5;
+    box-shadow: 0 0 0 1px var(--primary-red);
+}
+
+/* Multiple Choice / Button List */
+.choice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.choice-item {
+    border: 1px solid var(--border-gray);
+    border-radius: var(--border-radius);
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.choice-item.selected {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    background-color: #FFF0F5;
+    box-shadow: 0 0 0 1px var(--primary-red);
+}
+
+.choice-item:hover {
+    border-color: var(--secondary-red);
+    color: var(--secondary-red);
+    background-color: #FFF5F7;
+    transform: translateY(-2px);
+}
+
+/* Flex Layout for some sections (Replaced Grid) */
+.grid-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.grid-choices .choice-item {
+    /* 2 columns: (100% - 12px gap) / 2 */
+    width: calc(50% - 6px);
+    flex-grow: 1;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-red);
+}
+
+/* Submit Button */
+.submit-container {
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.submit-btn {
+    background: linear-gradient(251deg, var(--primary-red) 3%, var(--secondary-red) 100%);
+    color: var(--white);
+    padding: 16px 60px;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+    transition: transform 0.2s;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* .start-button {
+    background: var(--primary-red);
+    color: 
+    padding: 16px 48px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(163, 0, 59, 0.4);
+    transition: var(--transition);
+} */
+
+.submit-btn:hover {
+    background: var(--secondary-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(163, 0, 59, 0.5);
+}
+
+
+/* Checkbox specific */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+/* Helper classes */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Horizontal Choice List */
+.choice-list.horizontal {
+    display: flex;
+    flex-direction: row;
+    /* Explicitly set row to override base column style */
+    gap: 8px;
+}
+
+.choice-list.horizontal .choice-item {
+    padding: 12px 4px;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    flex: 1;
+}
+
+/* Question Header */
+.question-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.question-number {
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.question-desc {
+    font-size: 0.75rem;
+    color: #757575;
+    margin-bottom: 12px;
+}
+
+/* Checkbox List */
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-red);
+}
+
+/* Image Placeholders */
+.image-placeholder-box {
+    background: #f8f8f8;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+/* Feedback Textarea */
+.feedback-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+
+/* Demographics Section */
+.demographics-section {
+    background-color: #EEEFF3;
+    margin: 0 -16px;
+    padding: 32px 16px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.demographics-section .question-title {
+    font-size: 1rem;
+}
+
+.emp-id-input {
+    background-color: white;
+}
+
+/* Banner Enhancements */
+.banner {
+    text-align: center;
+}
+
+.banner-content {
+    padding: 24px 16px;
+}
+
+
+
+/* Error Message */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--secondary-red);
+    font-weight: 700;
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.error-message img {
+    width: 24px;
+    height: 24px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Completion Page */
+.completion-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.completion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+    gap: 32px;
+}
+
+.completion-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.completion-rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.completion-rewards h3 {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+}
+
+.reward-items {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.reward-item {
+    border: 2px solid var(--primary-red);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--primary-red);
+}
+
+.reward-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.reward-count {
+    font-size: 0.875rem;
+}
+
+.completion-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.completion-logo {
+    margin-top: auto;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ccc;
+}
+
+
+/* =========================================
+   Mobile RWD (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Global & Layout */
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    header {
+        padding: 16px 20px;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Landing Page */
+    .landing-top {
+        flex-direction: column;
+        height: auto;
+        padding: 32px 20px;
+        gap: 24px;
+    }
+
+    .landing-image {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .landing-bottom {
+        flex-direction: column-reverse;
+        /* Mascot at bottom */
+        padding: 0 20px 40px 20px;
+        /* gap handled by contents */
+        gap: 32px;
+        align-items: center;
+    }
+
+    .mascot-block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mascot-full {
+        position: static;
+        /* Reset absolute positioning */
+        max-width: 200px;
+        /* Limit size on mobile */
+    }
+
+    .prize-block {
+        margin: 0;
+        width: 100%;
+    }
+
+    .promo-list {
+        width: 100%;
+        justify-content: space-between;
+        /* or flex-start gap */
+    }
+
+    /* Survey Form */
+    .survey-section {
+        padding: 24px 20px;
+    }
+
+    /* Q1 Rating Scale: 5 per row */
+    .rating-item {
+        /* (100% - 4 * 8px gap) / 5 = approx 18% */
+        flex: none;
+        /* Disable desktop flex:1 behavior */
+        width: calc(20% - 7px);
+        font-size: 0.875rem;
+        padding: 8px 0;
+    }
+
+    /* Q2-Q9 Horizontal Choice List -> Vertical Stack */
+    .choice-list.horizontal {
+        flex-direction: column;
+    }
+
+    .choice-list.horizontal .choice-item {
+        width: 100%;
+        text-align: left;
+        padding: 16px;
+        justify-content: flex-start;
+        font-size: 1rem;
+        /* Remove desktop flex hacks */
+        flex: none;
+    }
+
+    /* Demographics Grid -> Vertical Stack */
+    .grid-choices {
+        flex-direction: column;
+    }
+
+    .grid-choices .choice-item {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Completion Page */
+    .completion-content {
+        padding: 24px;
+    }
+
+    .reward-items {
+        flex-direction: column;
+        width: 100%;
+    }
+}
