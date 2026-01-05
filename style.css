@@ -610,7 +610,7 @@ input[type="text"]:focus {
 
     /* Q2-Q9 Horizontal Choice List -> Vertical Stack */
     .choice-list.horizontal {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .choice-list.horizontal .choice-item {
