@@ -20,6 +20,19 @@
     padding: 0;
 }
 
+html {
+    /* 1rem = 16px */
+    font-size: 16px;
+
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
 .hidden {
     display: none !important;
 }
@@ -28,14 +41,6 @@ h1 {
     font-size: 2rem;
     font-weight: bold;
     white-space: nowrap;
-    /* Prevent title wrapping */
-}
-
-body {
-    font-family: 'Noto Sans TC', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
 }
 
 .container {
@@ -49,6 +54,10 @@ body {
 
 header {
     background-color: var(--primary-red);
+    background-image: url('assets/pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--white);
     padding: 20px 120px;
     display: flex;
@@ -65,7 +74,7 @@ header {
     background-color: var(--white);
     color: var(--secondary-red);
     padding: 8px 12px;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     font-weight: bold;
     white-space: nowrap;
@@ -85,15 +94,15 @@ header {
 }
 
 .landing-top {
-    display: flex;
     height: 300px;
     padding: 0 120px;
+    display: flex;
     gap: 40px;
     align-self: stretch;
     background-color: var(--tertiary-red);
 }
 
-.highlight-banner {
+.landing-highlight-banner {
     padding: 40px 0px;
     display: flex;
     flex-direction: column;
@@ -101,14 +110,14 @@ header {
     align-items: flex-start;
 }
 
-.highlight-title {
+.landing-highlight-title {
     color: var(--text-dark);
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 50px;
 }
 
-.highlight-list {
+.landing-highlight-list {
     color: var(--primary-red);
     list-style: none;
     font-size: 1.5rem;
@@ -131,7 +140,7 @@ header {
     width: 102%;
 }
 
-.atm-screen {
+.landing-atm-screen {
     position: absolute;
     bottom: 0;
     left: 0px;
@@ -146,40 +155,58 @@ header {
 }
 
 
-.mascot-block {
+.landing-mascot-block {
     position: relative;
     width: 40%;
 }
 
-.mascot-full {
+.landing-mascot-full {
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-.promo-block {
+.landing-promo-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
 
     margin: 100px 0 0 100px;
 }
 
-.promo-list {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+.landing-promo-title {
+    font-size: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+    color: var(--neutral-900, #000000);
 }
 
-.promo-item {
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.landing-promo-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    font-weight: bold;
+    gap: 8px;
+    font-size: 1.5rem;
+    /* 24px */
+    color: #4d4d4d;
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-weight: 600;
 }
 
+.landing-promo-list li {
+    line-height: 1.5;
+}
+
+.landing-promo-list .highlight {
+    color: #d93657;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
 
 /* survey */
 
@@ -300,7 +327,6 @@ input[type="text"]:focus {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* padding: 8px 0; */
 }
 
 
@@ -309,7 +335,6 @@ input[type="text"]:focus {
 .choice-list.horizontal {
     display: flex;
     flex-direction: row;
-    /* Explicitly set row to override base column style */
     gap: 8px;
 }
 
@@ -328,11 +353,6 @@ input[type="text"]:focus {
     gap: 8px;
     margin-bottom: 12px;
 }
-
-/* .question-number {
-    font-weight: bold;
-    color: var(--primary-red);
-} */
 
 .question-desc {
     font-size: 0.75rem;
@@ -370,13 +390,12 @@ input[type="text"]:focus {
 }
 
 .image-screen {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     display: block;
     margin: 0 auto;
     border: 1px solid var(--border-gray);
     border-radius: var(--border-radius);
-
 }
 
 /* Feedback Textarea */
@@ -452,19 +471,6 @@ input[type="text"]:focus {
     transform: scale(0.98);
 }
 
-/* .start-button {
-    background: var(--primary-red);
-    color: 
-    padding: 16px 48px;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(163, 0, 59, 0.4);
-    transition: var(--transition);
-} */
-
 .submit-btn:hover {
     background: var(--secondary-red);
     transform: translateY(-2px);
@@ -503,12 +509,12 @@ input[type="text"]:focus {
     gap: 40px;
 }
 
-.completion-title {
+/* .completion-title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-dark);
     margin-bottom: 8px;
-}
+} */
 
 .completion-image {
     width: 100%;
@@ -525,84 +531,101 @@ input[type="text"]:focus {
 
 
 /* =========================================
-   Mobile RWD (max-width: 768px)
+   Responsive Design Breakpoints
    ========================================= */
-@media (max-width: 768px) {
 
-    /* Global & Layout */
-    .container {
-        padding: 0;
-        max-width: 100%;
+/* 1. Desktop (1024px) */
+@media (max-width: 1024px) {
+    .survey-section {
+        padding: 40px 60px;
     }
 
-    header {
-        padding: 16px 20px;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    /* Landing Page */
+    /* Landing Page: Switch to Vertical Stack */
     .landing-top {
         flex-direction: column;
         height: auto;
-        padding: 32px 20px;
+        padding: 40px 60px;
+        align-items: center;
+        text-align: center;
         gap: 24px;
+    }
+
+    .landing-highlight-banner {
+        align-items: center;
+        padding: 0;
+    }
+
+    .landing-highlight-list {
+        align-items: flex-start;
+        max-width: 400px;
     }
 
     .landing-image {
         width: 100%;
-        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .landing-atm-screen {
+        position: static;
+        max-width: 400px;
+        width: 100%;
+        height: auto;
     }
 
     .landing-bottom {
-        flex-direction: column-reverse;
-        /* Mascot at bottom */
-        padding: 0 20px 40px 20px;
-        /* gap handled by contents */
-        gap: 32px;
+        flex-direction: column;
+        /* Mascot first, then prizes */
+        padding: 40px 60px;
         align-items: center;
+        gap: 40px;
     }
 
-    .mascot-block {
+    .landing-mascot-block {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    .mascot-full {
+    .landing-mascot-full {
         position: static;
-        /* Reset absolute positioning */
-        max-width: 200px;
-        /* Limit size on mobile */
+        max-width: 250px;
+        width: 100%;
+        height: auto;
     }
 
-    .prize-block {
+    .landing-promo-block {
         margin: 0;
         width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
-    .promo-list {
-        width: 100%;
-        justify-content: space-between;
-        /* or flex-start gap */
+    .landing-promo-list {
+        justify-content: center;
+    }
+}
+
+/* 2. Mobile (786px) */
+@media (max-width: 786px) {
+    header {
+        padding: 16px 20px;
+        /* No style change, just spacing */
     }
 
-    /* Survey Form */
     .survey-section {
         padding: 24px 20px;
     }
 
+    .landing-top,
+    .landing-bottom {
+        padding: 40px 20px;
+    }
+
     /* Q1 Rating Scale: 5 per row */
     .rating-item {
-        /* (100% - 4 * 8px gap) / 5 = approx 18% */
         flex: none;
-        /* Disable desktop flex:1 behavior */
         width: calc(20% - 7px);
         font-size: 0.875rem;
         padding: 8px 0;
@@ -619,7 +642,6 @@ input[type="text"]:focus {
         padding: 16px;
         justify-content: flex-start;
         font-size: 1rem;
-        /* Remove desktop flex hacks */
         flex: none;
     }
 
@@ -635,11 +657,31 @@ input[type="text"]:focus {
 
     /* Completion Page */
     .completion-content {
-        padding: 24px;
+        padding: 12px;
+    }
+}
+
+/* 3. Mobile (440px) */
+@media (max-width: 440px) {
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
     }
 
-    .reward-items {
-        flex-direction: column;
-        width: 100%;
+    .container {
+        padding: 0;
+    }
+
+    .landing-top,
+    .landing-bottom {
+        padding: 32px 16px;
+    }
+
+    .landing-highlight-list {
+        font-size: 1.25rem;
+    }
+
+    .image-screen {
+        max-width: 100%;
     }
 }
