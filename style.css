@@ -184,7 +184,7 @@ header {
     margin-top: 12px;
 }
 
-.mascot-link .link-icon {
+.mascot-link .mascot-link-icon {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
