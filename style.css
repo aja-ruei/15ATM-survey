@@ -511,7 +511,7 @@ input[type="text"]:focus {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 60px 16px;
+    padding: 32px 16px;
     background-color: var(--white);
 }
 
@@ -651,10 +651,10 @@ input[type="text"]:focus {
 
     /* Q1 Rating Scale: 5 per row */
     .rating-item {
-        flex: none;
         width: calc(20% - 7px);
         font-size: 0.875rem;
         padding: 8px 0;
+        flex: none;
     }
 
     /* Q2-Q9 Horizontal Choice List -> Vertical Stack */
@@ -664,10 +664,10 @@ input[type="text"]:focus {
 
     .choice-list.horizontal .choice-item {
         width: 100%;
-        text-align: left;
-        padding: 16px;
-        justify-content: flex-start;
         font-size: 1rem;
+        padding: 16px;
+        text-align: left;
+        justify-content: flex-start;
         flex: none;
     }
 
