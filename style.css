@@ -77,7 +77,6 @@ header {
     color: var(--secondary-red);
     padding: 8px 12px;
     border-radius: var(--border-radius);
-    font-size: 1rem;
     font-weight: bold;
     white-space: nowrap;
     flex-shrink: 0;
@@ -178,7 +177,6 @@ header {
     text-decoration: none;
     border-bottom: 1.5px solid #d93657;
     padding-bottom: 2px;
-    font-size: 1rem;
     gap: 4px;
     align-items: center;
     margin-top: 12px;
@@ -253,6 +251,7 @@ header {
 }
 
 .rating-item {
+    font-size: 1.125rem;
     flex: 1;
     border: 1.5px solid var(--border-gray);
     border-radius: var(--border-radius);
@@ -356,7 +355,6 @@ input[type="text"]:focus {
 
 .choice-list.horizontal .choice-item {
     padding: 12px 4px;
-    font-size: 1rem;
     justify-content: center;
     text-align: center;
     border-radius: var(--border-radius);
@@ -380,14 +378,15 @@ input[type="text"]:focus {
 .checkbox-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 
 .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     cursor: pointer;
+    font-size: 1.125rem;
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -434,9 +433,9 @@ input[type="text"]:focus {
     border-top: 1px solid var(--border-gray);
 }
 
-.demographics-section .question-title {
+/* .demographics-section .question-title {
     font-size: 1rem;
-}
+} */
 
 /* .emp-id-input {
     background-color: var(--white);
@@ -452,7 +451,6 @@ input[type="text"]:focus {
     margin-top: 12px;
     color: var(--secondary-red);
     font-weight: bold;
-    font-size: 1rem;
     animation: fadeIn 0.3s ease-in;
 }
 
@@ -475,7 +473,7 @@ input[type="text"]:focus {
     color: var(--white);
     padding: 16px 60px;
     border-radius: 24px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -652,7 +650,6 @@ input[type="text"]:focus {
     /* Q1 Rating Scale: 5 per row */
     .rating-item {
         width: calc(20% - 7px);
-        font-size: 0.875rem;
         padding: 8px 0;
         flex: none;
     }
@@ -664,7 +661,6 @@ input[type="text"]:focus {
 
     .choice-list.horizontal .choice-item {
         width: 100%;
-        font-size: 1rem;
         padding: 16px;
         text-align: left;
         justify-content: flex-start;
@@ -707,9 +703,9 @@ input[type="text"]:focus {
         font-size: 1.25rem;
     }
 
-    .landing-promo-list {
+    /* .landing-promo-list {
         font-size: 1rem;
-    }
+    } */
 
     .image-screen {
         max-width: 100%;
