@@ -28,7 +28,7 @@ html {
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: var(--bg-light);
+    /* background-color: var(--bg-light); */
     color: var(--text-dark);
     line-height: 1.6;
 }
@@ -62,7 +62,9 @@ header {
     padding: 20px 120px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -94,8 +96,10 @@ header {
 }
 
 .landing-top {
-    height: 300px;
+    height: 380px;
     padding: 0 120px;
+    margin: 24px 12px 0 12px;
+    border-radius: 40px;
     display: flex;
     gap: 40px;
     align-self: stretch;
@@ -113,7 +117,7 @@ header {
 .landing-highlight-title {
     color: var(--text-dark);
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 50px;
 }
 
@@ -121,7 +125,7 @@ header {
     color: var(--primary-red);
     list-style: none;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
@@ -137,7 +141,7 @@ header {
 
 
 .landing-page img {
-    width: 102%;
+    width: 120%;
 }
 
 .landing-atm-screen {
@@ -157,7 +161,7 @@ header {
 
 .landing-mascot-block {
     position: relative;
-    width: 40%;
+    width: 30%;
 }
 
 .landing-mascot-full {
@@ -166,36 +170,47 @@ header {
     left: 0;
 }
 
+.mascot-link {
+    display: none;
+    /* Hidden on desktop */
+    color: #d93657;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1.5px solid #d93657;
+    padding-bottom: 2px;
+    font-size: 1rem;
+    gap: 4px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.mascot-link svg {
+    flex-shrink: 0;
+}
+
 .landing-promo-block {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-
+    align-items: center;
+    gap: 24px;
     margin: 100px 0 0 100px;
 }
 
 .landing-promo-title {
     font-size: 1.5rem;
-    /* 24px */
     font-weight: bold;
     color: var(--neutral-900, #000000);
 }
 
-.poppins {
-    font-family: 'Poppins', sans-serif;
-}
 
 .landing-promo-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-size: 1.5rem;
-    /* 24px */
+    font-size: 1.25rem;
     color: #4d4d4d;
     list-style: disc;
-    padding-left: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .landing-promo-list li {
@@ -204,8 +219,7 @@ header {
 
 .landing-promo-list .highlight {
     color: #d93657;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 /* survey */
@@ -435,7 +449,7 @@ input[type="text"]:focus {
     gap: 8px;
     margin-top: 12px;
     color: var(--secondary-red);
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1rem;
     animation: fadeIn 0.3s ease-in;
 }
@@ -458,7 +472,7 @@ input[type="text"]:focus {
     background: linear-gradient(251deg, var(--primary-red) 3%, var(--secondary-red) 100%);
     color: var(--white);
     padding: 16px 60px;
-    border-radius: var(--border-radius);
+    border-radius: 24px;
     font-size: 1.5rem;
     font-weight: bold;
     border: none;
@@ -577,21 +591,27 @@ input[type="text"]:focus {
     .landing-bottom {
         flex-direction: column;
         /* Mascot first, then prizes */
-        padding: 40px 60px;
+        padding: 0 60px 40px 60px;
         align-items: center;
-        gap: 40px;
+        gap: 24px;
     }
 
     .landing-mascot-block {
         width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+    }
+
+    .mascot-link {
+        display: flex;
     }
 
     .landing-mascot-full {
         position: static;
         max-width: 250px;
-        width: 100%;
+        width: 40%;
         height: auto;
     }
 
@@ -620,7 +640,11 @@ input[type="text"]:focus {
 
     .landing-top,
     .landing-bottom {
-        padding: 40px 20px;
+        padding: 40px 20px 0px;
+    }
+
+    .landing-page img {
+        width: 100%;
     }
 
     /* Q1 Rating Scale: 5 per row */
@@ -664,7 +688,7 @@ input[type="text"]:focus {
 /* 3. Mobile (440px) */
 @media (max-width: 440px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
@@ -674,14 +698,22 @@ input[type="text"]:focus {
 
     .landing-top,
     .landing-bottom {
-        padding: 32px 16px;
+        padding: 32px 16px 0px;
     }
 
     .landing-highlight-list {
         font-size: 1.25rem;
     }
 
+    .landing-promo-list {
+        font-size: 1rem;
+    }
+
     .image-screen {
         max-width: 100%;
+    }
+
+    .landing-promo-title {
+        font-size: 1.25rem;
     }
 }
