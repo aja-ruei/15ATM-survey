@@ -184,12 +184,12 @@ header {
 /* survey */
 
 .survey-section {
-    padding: 24px 120px;
+    padding: 60px 120px;
 }
 
 
 .question {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 .question-title {
@@ -268,7 +268,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* Flex Layout for some sections (Replaced Grid) */
 .grid-choices {
     display: flex;
     flex-wrap: wrap;
@@ -293,6 +292,140 @@ input[type="text"] {
 input[type="text"]:focus {
     border-color: var(--primary-red);
 }
+
+
+
+/* Checkbox specific */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* padding: 8px 0; */
+}
+
+
+
+/* Horizontal Choice List */
+.choice-list.horizontal {
+    display: flex;
+    flex-direction: row;
+    /* Explicitly set row to override base column style */
+    gap: 8px;
+}
+
+.choice-list.horizontal .choice-item {
+    padding: 12px 4px;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    flex: 1;
+}
+
+/* Question Header */
+.question-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* .question-number {
+    font-weight: bold;
+    color: var(--primary-red);
+} */
+
+.question-desc {
+    font-size: 0.75rem;
+    color: #757575;
+    margin-bottom: 12px;
+}
+
+/* Checkbox List */
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-red);
+}
+
+/* Image Placeholders */
+.image-placeholder-box {
+    background: var(--white);
+    /* border: 1px solid var(--border-gray);
+    border-radius: var(--border-radius); */
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.image-screen {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--border-gray);
+    border-radius: var(--border-radius);
+
+}
+
+/* Feedback Textarea */
+.feedback-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid var(--border-gray);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    resize: vertical;
+}
+
+
+/* Demographics Section */
+.demographics-section {
+    /* background-color: #EEEFF3; */
+    margin: 0 -16px;
+    padding: 32px 16px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.demographics-section .question-title {
+    font-size: 1rem;
+}
+
+/* .emp-id-input {
+    background-color: var(--white);
+} */
+
+
+
+/* Error Message */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--secondary-red);
+    font-weight: 700;
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.error-message img {
+    width: 24px;
+    height: 24px;
+}
+
 
 /* Submit Button */
 .submit-container {
@@ -339,141 +472,6 @@ input[type="text"]:focus {
 }
 
 
-/* Checkbox specific */
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-}
-
-/* Helper classes */
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Horizontal Choice List */
-.choice-list.horizontal {
-    display: flex;
-    flex-direction: row;
-    /* Explicitly set row to override base column style */
-    gap: 8px;
-}
-
-.choice-list.horizontal .choice-item {
-    padding: 12px 4px;
-    font-size: 1rem;
-    justify-content: center;
-    text-align: center;
-    border-radius: var(--border-radius);
-    flex: 1;
-}
-
-/* Question Header */
-.question-header {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.question-number {
-    font-weight: bold;
-    color: var(--primary-red);
-}
-
-.question-desc {
-    font-size: 0.75rem;
-    color: #757575;
-    margin-bottom: 12px;
-}
-
-/* Checkbox List */
-.checkbox-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.checkbox-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--primary-red);
-}
-
-/* Image Placeholders */
-.image-placeholder-box {
-    background: #f8f8f8;
-    border: 1px solid var(--border-gray);
-    border-radius: 8px;
-    margin-bottom: 16px;
-    overflow: hidden;
-}
-
-/* Feedback Textarea */
-.feedback-textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 12px;
-    border: 1px solid var(--border-gray);
-    border-radius: 8px;
-    font-family: inherit;
-    resize: vertical;
-}
-
-
-/* Demographics Section */
-.demographics-section {
-    background-color: #EEEFF3;
-    margin: 0 -16px;
-    padding: 32px 16px;
-    border-top: 1px solid var(--border-gray);
-}
-
-.demographics-section .question-title {
-    font-size: 1rem;
-}
-
-.emp-id-input {
-    background-color: white;
-}
-
-/* Banner Enhancements */
-.banner {
-    text-align: center;
-}
-
-.banner-content {
-    padding: 24px 16px;
-}
-
-
-
-/* Error Message */
-.error-message {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 12px;
-    color: var(--secondary-red);
-    font-weight: 700;
-    font-size: 1rem;
-    animation: fadeIn 0.3s ease-in;
-}
-
-.error-message img {
-    width: 24px;
-    height: 24px;
-}
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -488,16 +486,11 @@ input[type="text"]:focus {
 
 /* Completion Page */
 .completion-page {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: var(--white);
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    padding: 60px 16px;
+    background-color: var(--white);
 }
 
 .completion-content {
@@ -505,65 +498,30 @@ input[type="text"]:focus {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 600px;
-    padding: 40px;
+    max-width: 800px;
     text-align: center;
-    gap: 32px;
+    gap: 40px;
 }
 
 .completion-title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-dark);
-}
-
-.completion-rewards {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.completion-rewards h3 {
-    font-size: 1.25rem;
-    color: var(--text-gray);
-}
-
-.reward-items {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-}
-
-.reward-item {
-    border: 2px solid var(--primary-red);
-    border-radius: 12px;
-    padding: 16px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    color: var(--primary-red);
-}
-
-.reward-text {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.reward-count {
-    font-size: 0.875rem;
+    margin-bottom: 8px;
 }
 
 .completion-image {
     width: 100%;
-    max-width: 400px;
+    display: flex;
+    justify-content: center;
 }
 
-.completion-logo {
-    margin-top: auto;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #ccc;
+.completion-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
 
 
 /* =========================================
