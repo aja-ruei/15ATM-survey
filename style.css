@@ -7,9 +7,6 @@
     --text-dark: #333333;
     --text-gray: #666666;
     --border-gray: #E0E0E0;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -43,14 +40,6 @@ h1 {
     white-space: nowrap;
 }
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    background-color: var(--white);
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-}
 
 header {
     background-color: var(--primary-red);
@@ -82,22 +71,25 @@ header {
     flex-shrink: 0;
 }
 
-
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: var(--white);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* landing page */
 
 .landing-page {
     position: relative;
-    width: 100%;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .landing-top {
     height: 380px;
     padding: 0 120px;
-    margin: 24px 12px 0px;
+    margin: 24px 12px 0;
     border-radius: 40px;
     display: flex;
     gap: 40px;
@@ -106,7 +98,7 @@ header {
 }
 
 .landing-highlight-banner {
-    padding: 40px 0px;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,7 +138,7 @@ header {
 .landing-atm-screen {
     position: absolute;
     bottom: 0;
-    left: 0px;
+    left: 0;
 }
 
 .landing-bottom {
@@ -172,14 +164,15 @@ header {
 .mascot-link {
     display: none;
     /* Hidden on desktop */
-    color: #d93657;
+    color: var(--secondary-red);
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 1.5px solid #d93657;
+    border-bottom: 1.5px solid var(--secondary-red);
     padding-bottom: 2px;
     gap: 4px;
     align-items: center;
     margin-top: 12px;
+    white-space: nowrap;
 }
 
 .mascot-link .mascot-link-icon {
@@ -206,6 +199,7 @@ header {
 .landing-promo-list {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
     font-size: 1.25rem;
     color: #4d4d4d;
@@ -218,7 +212,7 @@ header {
 }
 
 .landing-promo-list .highlight {
-    color: #d93657;
+    color: var(--secondary-red);
     font-weight: bold;
 }
 
@@ -253,7 +247,7 @@ header {
 .rating-item {
     font-size: 1.125rem;
     flex: 1;
-    border: 1.5px solid var(--border-gray);
+    border: 2px solid var(--border-gray);
     border-radius: var(--border-radius);
     padding: 12px 2px;
     text-align: center;
@@ -287,9 +281,8 @@ header {
 }
 
 .choice-item {
-    border: 1px solid var(--border-gray);
+    border: 2px solid var(--border-gray);
     border-radius: var(--border-radius);
-    padding: 12px 16px;
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
@@ -320,13 +313,14 @@ header {
     /* 2 columns: (100% - 12px gap) / 2 */
     width: calc(50% - 6px);
     flex-grow: 1;
+    padding: 16px;
 }
 
 /* Input styles */
 input[type="text"] {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--border-gray);
+    border: 2px solid var(--border-gray);
     border-radius: 8px;
     outline: none;
 }
@@ -354,7 +348,7 @@ input[type="text"]:focus {
 }
 
 .choice-list.horizontal .choice-item {
-    padding: 12px 4px;
+    padding: 16px;
     justify-content: center;
     text-align: center;
     border-radius: var(--border-radius);
@@ -418,7 +412,7 @@ input[type="text"]:focus {
     width: 100%;
     min-height: 100px;
     padding: 12px;
-    border: 1px solid var(--border-gray);
+    border: 2px solid var(--border-gray);
     border-radius: var(--border-radius);
     font-family: inherit;
     resize: vertical;
@@ -432,10 +426,6 @@ input[type="text"]:focus {
     padding: 32px 16px;
     border-top: 1px solid var(--border-gray);
 }
-
-/* .demographics-section .question-title {
-    font-size: 1rem;
-} */
 
 /* .emp-id-input {
     background-color: var(--white);
@@ -469,15 +459,15 @@ input[type="text"]:focus {
 
 
 .submit-btn {
-    background: linear-gradient(251deg, var(--primary-red) 3%, var(--secondary-red) 100%);
+    background: linear-gradient(263deg, #9A0036 3.28%, #D93657 100%);
     color: var(--white);
-    padding: 16px 60px;
+    padding: 16px 32px;
     border-radius: 24px;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    box-shadow: var(--btn-shadow);
+    box-shadow: 0 7px 34px 0 rgba(92, 18, 44, 0.30);
     transition: transform 0.2s;
 }
 
@@ -558,7 +548,6 @@ input[type="text"]:focus {
     .landing-top {
         flex-direction: column;
         height: auto;
-        padding: 40px 60px 0px;
         align-items: center;
         text-align: center;
         gap: 24px;
@@ -630,21 +619,24 @@ input[type="text"]:focus {
 /* 2. Mobile (786px) */
 @media (max-width: 786px) {
     header {
-        padding: 16px 20px;
-        /* No style change, just spacing */
+        padding: 16px;
     }
 
     .survey-section {
-        padding: 24px 20px;
+        padding: 24px 16px;
     }
 
     .landing-top,
     .landing-bottom {
-        padding: 40px 20px 0px;
+        padding: 40px 16px 0px;
     }
 
     .landing-page img {
-        width: 100%;
+        width: 90%;
+    }
+
+    .submit-btn {
+        margin-bottom: 40px;
     }
 
     /* Q1 Rating Scale: 5 per row */
@@ -702,10 +694,6 @@ input[type="text"]:focus {
     .landing-highlight-list {
         font-size: 1.25rem;
     }
-
-    /* .landing-promo-list {
-        font-size: 1rem;
-    } */
 
     .image-screen {
         max-width: 100%;
