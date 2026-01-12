@@ -14,7 +14,7 @@
         <img src="assets/logo.png" alt="Bank of Taiwan Logo" class="logo">
         <h1>ATM 介面改版回饋問卷</h1>
         <!-- 截止日待訂 -->
-        <div class="deadline-badge">2/23 截止</div>
+        <div class="deadline-badge">2/26 截止</div>
     </header>
 
     <div class="container">
@@ -45,8 +45,8 @@
                     <h2 class="landing-promo-title">只要 5 分鐘，完成即抽豐富大獎！</h2>
                     <!-- 獎項待確認 -->
                     <ul class="landing-promo-list">
-                        <li>100 元超商禮券 <span class="highlight">40</span> 名</li>
-                        <li>1000 元超商禮券 <span class="highlight">20</span> 名</li>
+                        <li>200 元超商禮券 <span class="highlight">10</span> 名</li>
+                        <li>500 元超商禮券 <span class="highlight">10</span> 名</li>
                     </ul>
                     <button type="button" class="submit-btn" id="start-survey-btn">開始填寫</button>
                 </div>
@@ -54,23 +54,20 @@
         </section>
 
         <form class="survey-section hidden" id="survey-form">
+
+
             <!-- Question 1 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">1. 滿分十分，我會給這次改版幾分？</div>
+                    <div class="question-title">1. 新版 ATM 看起來容易使用</div>
                 </div>
-                <div class="rating-scale">
-                    <input type="hidden" name="1-rating" value="">
-                    <div class="rating-item" data-value="1">1 分</div>
-                    <div class="rating-item" data-value="2">2 分</div>
-                    <div class="rating-item" data-value="3">3 分</div>
-                    <div class="rating-item" data-value="4">4 分</div>
-                    <div class="rating-item" data-value="5">5 分</div>
-                    <div class="rating-item" data-value="6">6 分</div>
-                    <div class="rating-item" data-value="7">7 分</div>
-                    <div class="rating-item" data-value="8">8 分</div>
-                    <div class="rating-item" data-value="9">9 分</div>
-                    <div class="rating-item" data-value="10">10 分</div>
+                <div class="choice-list horizontal">
+                    <input type="hidden" name="easy_to_use" value="">
+                    <div class="choice-item" data-value="非常不同意">非常不同意</div>
+                    <div class="choice-item" data-value="不同意">不同意</div>
+                    <div class="choice-item" data-value="普通">普通</div>
+                    <div class="choice-item" data-value="同意">同意</div>
+                    <div class="choice-item" data-value="非常同意">非常同意</div>
                 </div>
                 <div class="error-message hidden">
                     <img src="assets/warning.svg" alt="Warning">
@@ -81,10 +78,10 @@
             <!-- Question 2 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">2. 新版 ATM 看起來容易使用</div>
+                    <div class="question-title">2. 新版 ATM 的提款、轉帳、存款流程，可以滿足我的使用需求</div>
                 </div>
                 <div class="choice-list horizontal">
-                    <input type="hidden" name="2-easy_to_use" value="">
+                    <input type="hidden" name="satisfaction_process" value="">
                     <div class="choice-item" data-value="非常不同意">非常不同意</div>
                     <div class="choice-item" data-value="不同意">不同意</div>
                     <div class="choice-item" data-value="普通">普通</div>
@@ -100,10 +97,10 @@
             <!-- Question 3 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">3. 新版 ATM 的提款、轉帳、存款流程，可以滿足我的使用需求</div>
+                    <div class="question-title">3. 我認為新版的 ATM 畫面比以往更加簡潔且現代化</div>
                 </div>
                 <div class="choice-list horizontal">
-                    <input type="hidden" name="3-satisfaction_process" value="">
+                    <input type="hidden" name="modernization" value="">
                     <div class="choice-item" data-value="非常不同意">非常不同意</div>
                     <div class="choice-item" data-value="不同意">不同意</div>
                     <div class="choice-item" data-value="普通">普通</div>
@@ -119,26 +116,7 @@
             <!-- Question 4 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">4. 我認為新版的 ATM 畫面比以往更加簡潔且現代化</div>
-                </div>
-                <div class="choice-list horizontal">
-                    <input type="hidden" name="4-modernization" value="">
-                    <div class="choice-item" data-value="非常不同意">非常不同意</div>
-                    <div class="choice-item" data-value="不同意">不同意</div>
-                    <div class="choice-item" data-value="普通">普通</div>
-                    <div class="choice-item" data-value="同意">同意</div>
-                    <div class="choice-item" data-value="非常同意">非常同意</div>
-                </div>
-                <div class="error-message hidden">
-                    <img src="assets/warning.svg" alt="Warning">
-                    <span>這題忘記填嚕 (•ᴥ•)</span>
-                </div>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="question">
-                <div class="question-header">
-                    <div class="question-title">5. 下列項目中，我最有印象、最滿意的是（複選，最多三項）</div>
+                    <div class="question-title">4. 下列項目中，我最有印象、最滿意的是（複選，最多三項）</div>
                 </div>
                 <div class="checkbox-list">
                     <label class="checkbox-item"><input type="checkbox" name="satisfied_features" value="整體視覺介面風格改善">
@@ -164,13 +142,35 @@
                 </div>
             </div>
 
+            <!-- Question 5 -->
+            <div class="question">
+                <div class="question-header">
+                    <div class="question-title">5. 新版 ATM 整體的交易步驟比以往更精簡</div>
+                </div>
+                <div class="choice-list horizontal">
+                    <input type="hidden" name="process_streamlining" value="">
+                    <div class="choice-item" data-value="非常不同意">非常不同意</div>
+                    <div class="choice-item" data-value="不同意">不同意</div>
+                    <div class="choice-item" data-value="普通">普通</div>
+                    <div class="choice-item" data-value="同意">同意</div>
+                    <div class="choice-item" data-value="非常同意">非常同意</div>
+                </div>
+                <div class="error-message hidden">
+                    <img src="assets/warning.svg" alt="Warning">
+                    <span>這題忘記填嚕 (•ᴥ•)</span>
+                </div>
+            </div>
+
             <!-- Question 6 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">6. 新版 ATM 整體的交易步驟比以往更精簡</div>
+                    <div class="question-title">6. 新版 ATM 讓我可以提前掌握機台所提供的服務與狀態（如：可提領面額、語言模式等）</div>
+                </div>
+                <div class="image-placeholder-box">
+                    <img src="assets/q7_screen.png" alt="Display Screen" class="image-screen">
                 </div>
                 <div class="choice-list horizontal">
-                    <input type="hidden" name="6-process_streamlining" value="">
+                    <input type="hidden" name="info_mastery" value="">
                     <div class="choice-item" data-value="非常不同意">非常不同意</div>
                     <div class="choice-item" data-value="不同意">不同意</div>
                     <div class="choice-item" data-value="普通">普通</div>
@@ -186,13 +186,10 @@
             <!-- Question 7 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">7. 新版 ATM 讓我可以提前掌握機台所提供的服務與狀態（如：可提領面額、語言模式等）</div>
-                </div>
-                <div class="image-placeholder-box">
-                    <img src="assets/q7_screen.png" alt="Display Screen" class="image-screen">
+                    <div class="question-title">7. 新版 ATM 看起來不需重新學習也可以完成交易</div>
                 </div>
                 <div class="choice-list horizontal">
-                    <input type="hidden" name="7-info_mastery" value="">
+                    <input type="hidden" name="ease_of_learning" value="">
                     <div class="choice-item" data-value="非常不同意">非常不同意</div>
                     <div class="choice-item" data-value="不同意">不同意</div>
                     <div class="choice-item" data-value="普通">普通</div>
@@ -208,10 +205,13 @@
             <!-- Question 8 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">8. 新版 ATM 看起來不需重新學習也可以完成交易</div>
+                    <div class="question-title">8. 新版 ATM 的按鈕顯示位置一致，即使在不同交易項目，也能知道如何操作</div>
+                </div>
+                <div class="image-placeholder-box">
+                    <img src="assets/q9_screen.png" alt="Button Consistency" class="image-screen">
                 </div>
                 <div class="choice-list horizontal">
-                    <input type="hidden" name="8-ease_of_learning" value="">
+                    <input type="hidden" name="consistency" value="">
                     <div class="choice-item" data-value="非常不同意">非常不同意</div>
                     <div class="choice-item" data-value="不同意">不同意</div>
                     <div class="choice-item" data-value="普通">普通</div>
@@ -227,18 +227,20 @@
             <!-- Question 9 -->
             <div class="question">
                 <div class="question-header">
-                    <div class="question-title">9. 新版 ATM 的按鈕顯示位置一致，即使在不同交易項目，也能知道如何操作</div>
+                    <div class="question-title">9. 滿分十分，我會給這次改版幾分？</div>
                 </div>
-                <div class="image-placeholder-box">
-                    <img src="assets/q9_screen.png" alt="Button Consistency" class="image-screen">
-                </div>
-                <div class="choice-list horizontal">
-                    <input type="hidden" name="9-consistency" value="">
-                    <div class="choice-item" data-value="非常不同意">非常不同意</div>
-                    <div class="choice-item" data-value="不同意">不同意</div>
-                    <div class="choice-item" data-value="普通">普通</div>
-                    <div class="choice-item" data-value="同意">同意</div>
-                    <div class="choice-item" data-value="非常同意">非常同意</div>
+                <div class="rating-scale">
+                    <input type="hidden" name="rating" value="">
+                    <div class="rating-item" data-value="1">1 分</div>
+                    <div class="rating-item" data-value="2">2 分</div>
+                    <div class="rating-item" data-value="3">3 分</div>
+                    <div class="rating-item" data-value="4">4 分</div>
+                    <div class="rating-item" data-value="5">5 分</div>
+                    <div class="rating-item" data-value="6">6 分</div>
+                    <div class="rating-item" data-value="7">7 分</div>
+                    <div class="rating-item" data-value="8">8 分</div>
+                    <div class="rating-item" data-value="9">9 分</div>
+                    <div class="rating-item" data-value="10">10 分</div>
                 </div>
                 <div class="error-message hidden">
                     <img src="assets/warning.svg" alt="Warning">
